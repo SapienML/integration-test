@@ -3,15 +3,11 @@ var TsConfigPathsPlugin = require("awesome-typescript-loader").TsConfigPathsPlug
 module.exports = {
  entry: "./src/main.ts",
  resolve: {
-   extensions: [".webpack.js", ".web.js", ".ts", ".js"],
-   plugins: [
-    new TsConfigPathsPlugin(/* { tsconfig, compiler } */)
-]
+   extensions: [ ".webpack.js", ".web.js", ".ts", ".js"],
+   plugins: [ new TsConfigPathsPlugin() ]
  },
  module: {
-   loaders: [
-     { test: /\.ts$/, loader: "awesome-typescript-loader" }
-   ]
+   loaders: [ { test: /\.ts$/, loader: "awesome-typescript-loader" } ]
  },
  output: {
    filename: "bundle.js",
